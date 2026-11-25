@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.halaman {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.header p {
+  margin: 6px 0 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.kontrol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(480px, 100%);
+}
+
+.search {
+  display: flex;
+  background: #d9d9d9;
+}
+
+.search input {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 1rem;
+  color: #000;
+  outline-offset: -2px;
+}
+
+.search button {
+  border: 0;
+  background: transparent;
+  padding: 0 14px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.aksi {
+  display: flex;
+  gap: 12px;
+}
+
+.aksi button,
+.tombol-solo {
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.aksi button:hover,
+.tombol-solo:hover {
+  background: #ddd;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #1853f5;
+}
+
+.tabel-wrap {
+  margin-top: 12px;
+  background: #fff;
+  color: #000;
+  height: 460px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  border: 1px solid #e3e3e3;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+td {
+  padding: 10px 12px;
+  vertical-align: top;
+  border-top: 1px solid #e3e3e3;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: #f2f2f2;
+}
+
+tbody tr.terpilih {
+  background: #5eb6ff;
+}
+
+.cover {
+  width: 64px;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+}
+
+.cover.kosong {
+  background: #ddd;
+  color: #666;
+  font-size: .7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.kosong-teks {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 80px 12px;
+  margin: 0;
+}
+
+.halaman:has(.form) {
+  max-width: 620px;
+}
+
+.halaman:has(.form) .header {
+  text-align: center;
+}
+
+.form {
+  margin: 24px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 0;
+  background: #fff;
+  color: #000;
+  font-family: inherit;
+}
