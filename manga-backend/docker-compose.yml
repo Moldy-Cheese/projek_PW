@@ -1,0 +1,17 @@
+# Opsional: PostgreSQL lokal via Docker (jika tidak memakai instalasi PostgreSQL sendiri)
+services:
+  db:
+    image: postgres:16
+    container_name: manga_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: manga_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - manga_pgdata:/var/lib/postgresql/data
+
+volumes:
+  manga_pgdata:

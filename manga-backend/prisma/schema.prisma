@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Entitas utama aplikasi "Manga Sheva" (field sama dengan frontend React)
+model Manga {
+  id          Int      @id @default(autoincrement())
+  judul       String
+  genre       String   @default("")
+  image       String   @default("")
+  description String   @default("") @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("manga")
+}
